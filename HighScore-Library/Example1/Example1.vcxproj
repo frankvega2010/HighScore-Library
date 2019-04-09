@@ -71,6 +71,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)lib/include/;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -122,10 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="example.cpp" />
+    <ClInclude Include="..\lib\include\score.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\lib\include\score.h" />
+    <ClCompile Include="..\src\example\example.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

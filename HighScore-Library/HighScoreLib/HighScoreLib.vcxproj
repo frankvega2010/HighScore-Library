@@ -32,7 +32,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -69,7 +69,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -116,13 +125,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="addScore.cpp" />
-    <ClCompile Include="createHighScore.cpp" />
-    <ClCompile Include="getScoreName.cpp" />
-    <ClCompile Include="getScoreValue.cpp" />
+    <ClInclude Include="..\lib\include\score.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\lib\include\score.h" />
+    <ClCompile Include="..\src\lib\addScore.cpp" />
+    <ClCompile Include="..\src\lib\createHighScore.cpp" />
+    <ClCompile Include="..\src\lib\getScoreName.cpp" />
+    <ClCompile Include="..\src\lib\getScoreValue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
