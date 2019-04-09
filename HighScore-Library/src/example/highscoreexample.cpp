@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "score.h"
 
 using namespace std;
@@ -44,7 +45,7 @@ void addScore_Example()
 
 	createHighScore(highscoretest);
 
-	addScore(highscoretest, index, 45, 'g');
+	addScore(highscoretest, index, "Frank", 45);
 
 	cout << highscoretest.scoreList[index].name << " ";
 	cout << highscoretest.scoreList[index].value << endl;
@@ -65,7 +66,7 @@ void getScoreName_Example()
 
 	createHighScore(highscoretest);
 
-	addScore(highscoretest, index, 45, 'g');
+	addScore(highscoretest, index, "Frank", 45);
 
 	cout << getScoreName(highscoretest, index) << endl;
 }
@@ -78,7 +79,7 @@ void getScoreValue_Example()
 
 	createHighScore(highscoretest);
 
-	addScore(highscoretest, index, 45, 'g');
+	addScore(highscoretest, index, "Frank", 45);
 
 	cout << getScoreValue(highscoretest, index) << endl;
 }
