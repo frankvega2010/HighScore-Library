@@ -88,7 +88,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)lib/;$(SolutionDir)bin/$(Configuration)/$(Platform)/</AdditionalLibraryDirectories>
-      <AdditionalDependencies>HighScoreLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>HighScoreLib-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HighScoreLib", "HighScoreLib\HighScoreLib.vcxproj", "{F7C51CDD-F957-4266-AB52-F35D5E1EE726}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Example1", "Example1\Example1.vcxproj", "{D178B05E-4357-43D3-A651-258442AD41E7}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F7C51CDD-F957-4266-AB52-F35D5E1EE726} = {F7C51CDD-F957-4266-AB52-F35D5E1EE726}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
