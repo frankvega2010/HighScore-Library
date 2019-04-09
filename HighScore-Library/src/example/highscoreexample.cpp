@@ -68,25 +68,41 @@ void getScoreName_Example()
 	addScore(highscoretest, index, 45, 'g');
 
 	cout << getScoreName(highscoretest, index) << endl;
-	//cout << getScoreValue(highscoretest, index) << endl;
+}
+
+void getScoreValue_Example()
+{
+	HighScore highscoretest;
+
+	int index = 3;
+
+	createHighScore(highscoretest);
+
+	addScore(highscoretest, index, 45, 'g');
+
+	cout << getScoreValue(highscoretest, index) << endl;
 }
 
 void main()
 {
+	cout << "// createHighScore_Example() ---------------------------------" << endl;
 	createHighScore_Example();
-
 	cout << endl;
 
+	cout << "// createHighScore_Example2() ---------------------------------" << endl;
 	createHighScore_Example2();
-
 	cout << endl;
 
+	cout << "// addScore_Example() ---------------------------------" << endl;
 	addScore_Example();
-
 	cout << endl;
 
+	cout << "// getScoreName_Example() ---------------------------------" << endl;
 	getScoreName_Example();
+	cout << endl;
 
+	cout << "// getScoreValue_Example() ---------------------------------" << endl;
+	getScoreValue_Example();
 	cout << endl;
 
 	cin.get();
