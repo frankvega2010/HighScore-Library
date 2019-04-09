@@ -71,12 +71,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)</TargetName>
-    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <OutDir>$(SolutionDir)bin/$(Configuration)/$(Platform)/</OutDir>
     <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>$(ProjectName)</TargetName>
-    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <OutDir>$(SolutionDir)bin/$(Configuration)/$(Platform)/</OutDir>
     <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

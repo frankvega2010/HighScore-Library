@@ -71,11 +71,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)lib/include/;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <OutDir>$(SolutionDir)bin/$(Configuration)/$(Platform)/</OutDir>
     <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)bin/$(ProjectName)/$(Configuration)/$(Platform)/</OutDir>
+    <OutDir>$(SolutionDir)bin/$(Configuration)/$(Platform)/</OutDir>
     <IntDir>$(SolutionDir)obj/$(ProjectName)/$(Configuration)/$(Platform)/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -87,7 +87,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)lib/include/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib/;$(SolutionDir)bin/$(Configuration)/$(Platform)/</AdditionalLibraryDirectories>
       <AdditionalDependencies>HighScoreLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -131,7 +131,7 @@
     <ClInclude Include="..\lib\include\score.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\example\example.cpp" />
+    <ClCompile Include="..\src\example\highscoreexample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

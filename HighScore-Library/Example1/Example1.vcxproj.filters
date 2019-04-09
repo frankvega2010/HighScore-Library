@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\example\example.cpp">
+    <ClCompile Include="..\src\example\highscoreexample.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
