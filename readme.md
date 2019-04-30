@@ -3,7 +3,7 @@
 
 Gets your hands on HighScore-Library to avoid wasting your time making high scores yourself. This library provides you with really simple functions to be able to create ,modify and show your high scores!
 
-Download: https://github.com/frankvega2010/HighScore-Library/releases/tag/v1.0
+Download: https://github.com/frankvega2010/HighScore-Library/releases/tag/v1%2C1
 
 Wiki: https://github.com/frankvega2010/HighScore-Library/wiki
 
